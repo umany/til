@@ -44,7 +44,7 @@ const app = new App({
 })();
 ```
 
-SlackからのWebhookを受け取れるように、アプリを起動し、ngrokでTCPポート3000をインターネット上に公開
+SlackからのWebhookを受け取れるように、アプリを起動し、[ngrok](https://ngrok.com)でTCPポート3000をインターネット上に公開
 ```shell
 node app.js
 ngrok http 3000
