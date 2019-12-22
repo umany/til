@@ -44,8 +44,9 @@ const app = new App({
 })();
 ```
 
-SlackからのWebhookを受け取れるように、ngrokでTCPポート3000をインターネット上に公開
+SlackからのWebhookを受け取れるように、アプリを起動し、ngrokでTCPポート3000をインターネット上に公開
 ```shell
+node app.js
 ngrok http 3000
 ```
 
@@ -59,3 +60,9 @@ app.message(/こんにち[はわ]/, async ({message, say}) => {
   say(`こんにちは、<@${message.user}>さん`);
 });
 ```
+
+Botをチャンネルに追加し、挨拶してみる
+
+![Botとの会話](https://raw.githubusercontent.com/umany/til/master/_images/slack-hello-bot.png)
+
+挨拶を返すBotが出来た。
